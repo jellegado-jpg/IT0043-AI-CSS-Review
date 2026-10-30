@@ -1,46 +1,111 @@
 :root {
-  /* Color Roles */
-  --color-primary: #0056b3;
-  --color-secondary: #4a5568;
-  --color-bg: #f8f9fa;
-  --color-text: #1a202c;
 
---space-xs: 0.25rem;
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2rem;
-
---font-base: system-ui, -apple-system, sans-serif;
+  
+  --font-base: system-ui, -apple-system, sans-serif;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.25rem;
   --text-xl: 1.75rem;
+  --text-2xl: 2.25rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  padding: var(--space-md);
+}
+
+h1, h2, h3 {
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+h1 { font-size: var(--text-2xl); }
+h2 { font-size: var(--text-xl); }
+p { margin-bottom: var(--space-md); }
+
+
+header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  list-style: none;
+}
 
 nav a {
-  color: var(--color-primary);
+  color: var(--color-text-muted);
   text-decoration: none;
+  font-weight: 600;
   padding: var(--space-sm) var(--space-md);
-}
-  nav a:hover {
-  text-decoration: underline;
+  border-radius: 4px;
 }
 
-nav a:focus {
+nav a:hover {
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+}
+
+nav a:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+  color: var(--color-primary);
 }
-  .card {
-  background-color: #ffffff;
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   padding: var(--space-lg);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: var(--space-lg);
 }
-  .btn {
+
+.btn {
+  display: inline-block;
   background-color: var(--color-primary);
   color: #ffffff;
   padding: var(--space-sm) var(--space-md);
   border: none;
   border-radius: 4px;
+  font-size: var(--text-base);
+  font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
 }
