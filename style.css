@@ -1,1 +1,46 @@
+:root {
+  /* Color Roles */
+  --color-primary: #0056b3;
+  --color-secondary: #4a5568;
+  --color-bg: #f8f9fa;
+  --color-text: #1a202c;
 
+--space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+--font-base: system-ui, -apple-system, sans-serif;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+
+nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: var(--space-sm) var(--space-md);
+}
+  nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+  .card {
+  background-color: #ffffff;
+  padding: var(--space-lg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+  .btn {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
